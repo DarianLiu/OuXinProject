@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.liumang.instantchat.ui.activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/flContent"
+        android:layout_above="@+id/rgTabBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RadioGroup
+        android:id="@+id/rgTabBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_height"
+        android:orientation="horizontal"
+        android:background="@drawable/line"
+        android:layout_alignParentBottom="true">
+
+        <RadioButton
+            android:id="@+id/rbIndex"
+            style="@style/TabButton"
+            android:drawableTop="@drawable/tab_index_selector"
+            android:textSize="@dimen/text_size_s"
+            android:text="@string/app_name"/>
+
+        <RadioButton
+            android:id="@+id/rbAddress"
+            style="@style/TabButton"
+            android:textSize="@dimen/text_size_s"
+            android:drawableTop="@drawable/tab_address_selector"
+            android:text="@string/tab_address"/>
+
+        <RadioButton
+            android:id="@+id/rbFind"
+            style="@style/TabButton"
+            android:textSize="12sp"
+            android:drawableTop="@drawable/tab_find_selector"
+            android:text="@string/tab_find"/>
+
+        <RadioButton
+            android:id="@+id/rbMine"
+            style="@style/TabButton"
+            android:textSize="@dimen/text_size_s"
+            android:drawableTop="@drawable/tab_mine_selector"
+            android:text="@string/tab_mine"/>
+
+    </RadioGroup>
+
+</RelativeLayout>
